@@ -37,7 +37,7 @@
     <dependency>
       <groupId>com.rabbitmq</groupId>
       <artifactId>amqp-client</artifactId>
-      <version>4.4.0</version>
+      <version>4.6.0</version>
       <!--<scope>comṕile</scope>-->
     </dependency>
     <dependency>

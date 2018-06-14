@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Receptor {
 
-  private final static String QUEUE_NAME = "minha-fila2";
+  private final static String QUEUE_NAME = "macedo";
 
   public static void main(String[] argv) throws Exception {
     try {
@@ -23,7 +23,8 @@ public class Receptor {
         public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body)
             throws IOException {
           String message = new String(body, "UTF-8");
-          System.out.println(" [x] Mensagem recebida: '" + message + "'");
+          //System.out.println(" [x] Mensagem recebida: '" + message + "'");
+          System.out.println(message);
         }
       };
       channel.basicConsume(QUEUE_NAME, true, consumer);
