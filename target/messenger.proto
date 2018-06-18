@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package rabbitmq;
+
+option java_package = "br.ufs.dcomp.rabbitmq";
+option java_outer_classname = "MsgProto";
+
+message Messenger{
+    string sender   = 1; // Nome do emissor
+    string date     = 2; // Data de envio
+    string time     = 3; // Hora de envio
+    string group    = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+
+    message Conteudo{
+        string type = 1; // Tipo do conteúdo no padrão de tipos MIME. Exemplos: "text/plain", "image/png" 
+        bytes  body = 2; // Sequência de bytes que compõe o corpo da mensagem
+        string name = 3; //Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+     }
+     Conteudo content = 5;
+}
