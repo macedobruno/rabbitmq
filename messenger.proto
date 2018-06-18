@@ -14,7 +14,7 @@ message Messenger{
     message Conteudo{
         string type = 1; // Tipo do conteúdo no padrão de tipos MIME. Exemplos: "text/plain", "image/png" 
         bytes  body = 2; // Sequência de bytes que compõe o corpo da mensagem
-        string name = 3; //Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+        string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
      }
      Conteudo content = 5;
 }

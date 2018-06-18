@@ -2,6 +2,8 @@ package br.ufs.dcomp.rabbitmq;
 
 import java.io.IOException;
 import java.util.Scanner;
+//import java.net.HttpUrlConnection;
+//import com.rabbitmq.http.client.Client;
 
 public class UseMessenger{
 
@@ -86,9 +88,16 @@ public class UseMessenger{
                 } else if (message.indexOf("upload") == 1){
                     String comando[] = message.trim().split(" ");
                     messenger.upload(comando[1]);
-                }/* else if (message.indexOf("listUsers") == 1){ //listar usuários
+                } /*else if (message.indexOf("listUsers") == 1){ //listar usuários
+                  //teste de listar usuário
+                    try {
+                        Client c = new Client("http://ec2-18-236-172-69.us-west-2.compute.amazonaws.com:15672/api/", "guest", "guest");
+                        c.getQueues();
+                  } catch(IOException ex){
+                      System.out.println("\n##### Erro! Não foi possível realizar a requisição #####");
+                  }
                     
-                } else if (message.indexOf("listGroup") == 1){ //listar grupos
+                } /*else if (message.indexOf("listGroup") == 1){ //listar grupos
                     
                 } */
             } else {

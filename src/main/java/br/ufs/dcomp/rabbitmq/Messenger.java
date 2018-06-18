@@ -211,6 +211,7 @@ public class Messenger{
         return df.format(today);
     }
     
+    /*
     public void protoSender(String mensagem){
         MsgProto.Conteudo.Builder content = MsgProto.Conteudo.newBuilder();
         content.setType("text/plain");
@@ -234,5 +235,5 @@ public class Messenger{
     
     public void protoFile(byte[] file) throws Exception{
         
-    }
+    }*/
 }
