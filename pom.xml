@@ -15,7 +15,7 @@
           <archive>
             <manifest>
               <mainClass>
-                br.ufs.dcomp.rabbitmq.Emissor
+                br.ufs.dcomp.rabbitmq.UseMessenger
               </mainClass>
             </manifest>
           </archive>
