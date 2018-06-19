@@ -2,8 +2,12 @@ package br.ufs.dcomp.rabbitmq;
 
 import java.io.IOException;
 import java.util.Scanner;
-//import java.net.HttpUrlConnection;
-//import com.rabbitmq.http.client.Client;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.InputStreamReader;
+import java.util.*;
 
 public class UseMessenger{
 
@@ -88,11 +92,15 @@ public class UseMessenger{
                 } else if (message.indexOf("upload") == 1){
                     String comando[] = message.trim().split(" ");
                     messenger.upload(comando[1]);
-                } /*else if (message.indexOf("listUsers") == 1){ //listar usuários
+                }/* else if (message.indexOf("listUsers") == 1){ //listar usuários
                   //teste de listar usuário
                     try {
-                        Client c = new Client("http://ec2-18-236-172-69.us-west-2.compute.amazonaws.com:15672/api/", "guest", "guest");
-                        c.getQueues();
+                        //HttpURLConnectionExample http = new HttpURLConnectionExample();
+                        
+                        //Client c = new Client("http://ec2-18-236-172-69.us-west-2.compute.amazonaws.com:15672/api/", "guest", "guest");
+                        //c.getQueues();
+                        System.out.println("Testing 1 - Send Http GET request");
+		                sendGet();
                   } catch(IOException ex){
                       System.out.println("\n##### Erro! Não foi possível realizar a requisição #####");
                   }
@@ -113,4 +121,55 @@ public class UseMessenger{
         
         return true;
     }
+    
+    /*// HTTP GET request
+	private static void sendGet() throws Exception {
+
+	    String urlToRead = "http://sender:abc123@ec2-18-236-172-69.us-west-2.compute.amazonaws.com:15672/api/queues/";
+		
+		
+		URL obj = new URL(urlToRead);
+		HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+
+		// optional default is GET
+		con.setRequestMethod("GET");
+
+		//add request header
+		con.setRequestProperty("User-Agent", "Mozilla/5.0");
+
+		int responseCode = con.getResponseCode();
+		System.out.println("\nSending 'GET' request to URL : " + urlToRead);
+		System.out.println("Response Code : " + responseCode);
+
+		BufferedReader in = new BufferedReader(
+		        new InputStreamReader(con.getInputStream()));
+		String inputLine;
+		StringBuffer response = new StringBuffer();
+
+		while ((inputLine = in.readLine()) != null) {
+			response.append(inputLine);
+		}
+		in.close();
+
+		//print result
+		System.out.println(response.toString());
+	/*
+		StringBuilder result = new StringBuilder();
+        URL url = new URL(urlToRead);
+        HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+        conn.setRequestMethod("GET");
+        int responseCode = conn.getResponseCode();
+		System.out.println("\nSending 'GET' request to URL : " + url);
+		System.out.println("Response Code : " + responseCode);
+        BufferedReader rd = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        String line;
+        while ((line = rd.readLine()) != null) {
+            result.append(line);
+        }
+        rd.close();
+        //return result.toString();
+        System.out.println(result.toString());
+
+	}*/
+	
 }

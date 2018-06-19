@@ -5,7 +5,7 @@ package rabbitmq;
 option java_package = "br.ufs.dcomp.rabbitmq";
 option java_outer_classname = "MsgProto";
 
-message Messenger{
+message ChatMessenger{
     string sender   = 1; // Nome do emissor
     string date     = 2; // Data de envio
     string time     = 3; // Hora de envio

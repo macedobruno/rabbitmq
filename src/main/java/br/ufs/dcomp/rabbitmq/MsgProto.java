@@ -14,8 +14,8 @@ public final class MsgProto {
     registerAllExtensions(
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
-  public interface MessengerOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:rabbitmq.Messenger)
+  public interface ChatMessengerOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:rabbitmq.ChatMessenger)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -74,7 +74,7 @@ public final class MsgProto {
 
     /**
      * <pre>
-     *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+     * Informa o nome do grupo, se a mensagem for para um grupo
      * </pre>
      *
      * <code>string group = 4;</code>
@@ -82,7 +82,7 @@ public final class MsgProto {
     java.lang.String getGroup();
     /**
      * <pre>
-     *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+     * Informa o nome do grupo, se a mensagem for para um grupo
      * </pre>
      *
      * <code>string group = 4;</code>
@@ -91,31 +91,31 @@ public final class MsgProto {
         getGroupBytes();
 
     /**
-     * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+     * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
      */
     boolean hasContent();
     /**
-     * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+     * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
      */
-    br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo getContent();
+    br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo getContent();
     /**
-     * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+     * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
      */
-    br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder getContentOrBuilder();
+    br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder getContentOrBuilder();
   }
   /**
-   * Protobuf type {@code rabbitmq.Messenger}
+   * Protobuf type {@code rabbitmq.ChatMessenger}
    */
-  public  static final class Messenger extends
+  public  static final class ChatMessenger extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:rabbitmq.Messenger)
-      MessengerOrBuilder {
+      // @@protoc_insertion_point(message_implements:rabbitmq.ChatMessenger)
+      ChatMessengerOrBuilder {
   private static final long serialVersionUID = 0L;
-    // Use Messenger.newBuilder() to construct.
-    private Messenger(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+    // Use ChatMessenger.newBuilder() to construct.
+    private ChatMessenger(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
       super(builder);
     }
-    private Messenger() {
+    private ChatMessenger() {
       sender_ = "";
       date_ = "";
       time_ = "";
@@ -127,7 +127,7 @@ public final class MsgProto {
     getUnknownFields() {
       return this.unknownFields;
     }
-    private Messenger(
+    private ChatMessenger(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -178,11 +178,11 @@ public final class MsgProto {
               break;
             }
             case 42: {
-              br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder subBuilder = null;
+              br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder subBuilder = null;
               if (content_ != null) {
                 subBuilder = content_.toBuilder();
               }
-              content_ = input.readMessage(br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.parser(), extensionRegistry);
+              content_ = input.readMessage(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.parser(), extensionRegistry);
               if (subBuilder != null) {
                 subBuilder.mergeFrom(content_);
                 content_ = subBuilder.buildPartial();
@@ -204,18 +204,18 @@ public final class MsgProto {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_descriptor;
+      return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_fieldAccessorTable
+      return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              br.ufs.dcomp.rabbitmq.MsgProto.Messenger.class, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Builder.class);
+              br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.class, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Builder.class);
     }
 
     public interface ConteudoOrBuilder extends
-        // @@protoc_insertion_point(interface_extends:rabbitmq.Messenger.Conteudo)
+        // @@protoc_insertion_point(interface_extends:rabbitmq.ChatMessenger.Conteudo)
         com.google.protobuf.MessageOrBuilder {
 
       /**
@@ -247,7 +247,7 @@ public final class MsgProto {
 
       /**
        * <pre>
-       *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+       * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -255,7 +255,7 @@ public final class MsgProto {
       java.lang.String getName();
       /**
        * <pre>
-       *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+       * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -264,11 +264,11 @@ public final class MsgProto {
           getNameBytes();
     }
     /**
-     * Protobuf type {@code rabbitmq.Messenger.Conteudo}
+     * Protobuf type {@code rabbitmq.ChatMessenger.Conteudo}
      */
     public  static final class Conteudo extends
         com.google.protobuf.GeneratedMessageV3 implements
-        // @@protoc_insertion_point(message_implements:rabbitmq.Messenger.Conteudo)
+        // @@protoc_insertion_point(message_implements:rabbitmq.ChatMessenger.Conteudo)
         ConteudoOrBuilder {
     private static final long serialVersionUID = 0L;
       // Use Conteudo.newBuilder() to construct.
@@ -343,14 +343,14 @@ public final class MsgProto {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_Conteudo_descriptor;
+        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_Conteudo_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_Conteudo_fieldAccessorTable
+        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_Conteudo_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.class, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder.class);
+                br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.class, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder.class);
       }
 
       public static final int TYPE_FIELD_NUMBER = 1;
@@ -412,7 +412,7 @@ public final class MsgProto {
       private volatile java.lang.Object name_;
       /**
        * <pre>
-       *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+       * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -431,7 +431,7 @@ public final class MsgProto {
       }
       /**
        * <pre>
-       *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+       * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
        * </pre>
        *
        * <code>string name = 3;</code>
@@ -499,10 +499,10 @@ public final class MsgProto {
         if (obj == this) {
          return true;
         }
-        if (!(obj instanceof br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo)) {
+        if (!(obj instanceof br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo)) {
           return super.equals(obj);
         }
-        br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo other = (br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo) obj;
+        br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo other = (br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo) obj;
 
         boolean result = true;
         result = result && getType()
@@ -533,69 +533,69 @@ public final class MsgProto {
         return hash;
       }
 
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           java.nio.ByteBuffer data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           java.nio.ByteBuffer data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           com.google.protobuf.ByteString data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           com.google.protobuf.ByteString data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(byte[] data)
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(byte[] data)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           byte[] data,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
         return PARSER.parseFrom(data, extensionRegistry);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(java.io.InputStream input)
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input, extensionRegistry);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseDelimitedFrom(java.io.InputStream input)
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseDelimitedFrom(java.io.InputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseDelimitedFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseDelimitedFrom(
           java.io.InputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           com.google.protobuf.CodedInputStream input)
           throws java.io.IOException {
         return com.google.protobuf.GeneratedMessageV3
             .parseWithIOException(PARSER, input);
       }
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parseFrom(
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parseFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
@@ -607,7 +607,7 @@ public final class MsgProto {
       public static Builder newBuilder() {
         return DEFAULT_INSTANCE.toBuilder();
       }
-      public static Builder newBuilder(br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo prototype) {
+      public static Builder newBuilder(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo prototype) {
         return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
       }
       public Builder toBuilder() {
@@ -622,25 +622,25 @@ public final class MsgProto {
         return builder;
       }
       /**
-       * Protobuf type {@code rabbitmq.Messenger.Conteudo}
+       * Protobuf type {@code rabbitmq.ChatMessenger.Conteudo}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-          // @@protoc_insertion_point(builder_implements:rabbitmq.Messenger.Conteudo)
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder {
+          // @@protoc_insertion_point(builder_implements:rabbitmq.ChatMessenger.Conteudo)
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_Conteudo_descriptor;
+          return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_Conteudo_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_Conteudo_fieldAccessorTable
+          return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_Conteudo_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
-                  br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.class, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder.class);
+                  br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.class, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder.class);
         }
 
-        // Construct using br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.newBuilder()
+        // Construct using br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.newBuilder()
         private Builder() {
           maybeForceBuilderInitialization();
         }
@@ -668,23 +668,23 @@ public final class MsgProto {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_Conteudo_descriptor;
+          return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_Conteudo_descriptor;
         }
 
-        public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo getDefaultInstanceForType() {
-          return br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.getDefaultInstance();
+        public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo getDefaultInstanceForType() {
+          return br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.getDefaultInstance();
         }
 
-        public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo build() {
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo result = buildPartial();
+        public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo build() {
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo result = buildPartial();
           if (!result.isInitialized()) {
             throw newUninitializedMessageException(result);
           }
           return result;
         }
 
-        public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo buildPartial() {
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo result = new br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo(this);
+        public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo buildPartial() {
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo result = new br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo(this);
           result.type_ = type_;
           result.body_ = body_;
           result.name_ = name_;
@@ -719,16 +719,16 @@ public final class MsgProto {
           return (Builder) super.addRepeatedField(field, value);
         }
         public Builder mergeFrom(com.google.protobuf.Message other) {
-          if (other instanceof br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo) {
-            return mergeFrom((br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo)other);
+          if (other instanceof br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo) {
+            return mergeFrom((br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo)other);
           } else {
             super.mergeFrom(other);
             return this;
           }
         }
 
-        public Builder mergeFrom(br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo other) {
-          if (other == br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.getDefaultInstance()) return this;
+        public Builder mergeFrom(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo other) {
+          if (other == br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.getDefaultInstance()) return this;
           if (!other.getType().isEmpty()) {
             type_ = other.type_;
             onChanged();
@@ -753,11 +753,11 @@ public final class MsgProto {
             com.google.protobuf.CodedInputStream input,
             com.google.protobuf.ExtensionRegistryLite extensionRegistry)
             throws java.io.IOException {
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo parsedMessage = null;
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo parsedMessage = null;
           try {
             parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
           } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-            parsedMessage = (br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo) e.getUnfinishedMessage();
+            parsedMessage = (br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo) e.getUnfinishedMessage();
             throw e.unwrapIOException();
           } finally {
             if (parsedMessage != null) {
@@ -900,7 +900,7 @@ public final class MsgProto {
         private java.lang.Object name_ = "";
         /**
          * <pre>
-         *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+         * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
          * </pre>
          *
          * <code>string name = 3;</code>
@@ -919,7 +919,7 @@ public final class MsgProto {
         }
         /**
          * <pre>
-         *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+         * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
          * </pre>
          *
          * <code>string name = 3;</code>
@@ -939,7 +939,7 @@ public final class MsgProto {
         }
         /**
          * <pre>
-         *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+         * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
          * </pre>
          *
          * <code>string name = 3;</code>
@@ -956,7 +956,7 @@ public final class MsgProto {
         }
         /**
          * <pre>
-         *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+         * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
          * </pre>
          *
          * <code>string name = 3;</code>
@@ -969,7 +969,7 @@ public final class MsgProto {
         }
         /**
          * <pre>
-         *optional string name = 3; // Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
+         * Nome do conteúdo, se existente. Exemplos: "logo_ufs.png", "index.html"
          * </pre>
          *
          * <code>string name = 3;</code>
@@ -996,16 +996,16 @@ public final class MsgProto {
         }
 
 
-        // @@protoc_insertion_point(builder_scope:rabbitmq.Messenger.Conteudo)
+        // @@protoc_insertion_point(builder_scope:rabbitmq.ChatMessenger.Conteudo)
       }
 
-      // @@protoc_insertion_point(class_scope:rabbitmq.Messenger.Conteudo)
-      private static final br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo DEFAULT_INSTANCE;
+      // @@protoc_insertion_point(class_scope:rabbitmq.ChatMessenger.Conteudo)
+      private static final br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo DEFAULT_INSTANCE;
       static {
-        DEFAULT_INSTANCE = new br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo();
+        DEFAULT_INSTANCE = new br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo();
       }
 
-      public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo getDefaultInstance() {
+      public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo getDefaultInstance() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1028,7 +1028,7 @@ public final class MsgProto {
         return PARSER;
       }
 
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo getDefaultInstanceForType() {
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo getDefaultInstanceForType() {
         return DEFAULT_INSTANCE;
       }
 
@@ -1164,7 +1164,7 @@ public final class MsgProto {
     private volatile java.lang.Object group_;
     /**
      * <pre>
-     *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+     * Informa o nome do grupo, se a mensagem for para um grupo
      * </pre>
      *
      * <code>string group = 4;</code>
@@ -1183,7 +1183,7 @@ public final class MsgProto {
     }
     /**
      * <pre>
-     *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+     * Informa o nome do grupo, se a mensagem for para um grupo
      * </pre>
      *
      * <code>string group = 4;</code>
@@ -1203,23 +1203,23 @@ public final class MsgProto {
     }
 
     public static final int CONTENT_FIELD_NUMBER = 5;
-    private br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo content_;
+    private br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo content_;
     /**
-     * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+     * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
      */
     public boolean hasContent() {
       return content_ != null;
     }
     /**
-     * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+     * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
      */
-    public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo getContent() {
-      return content_ == null ? br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.getDefaultInstance() : content_;
+    public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo getContent() {
+      return content_ == null ? br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.getDefaultInstance() : content_;
     }
     /**
-     * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+     * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
      */
-    public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder getContentOrBuilder() {
+    public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder getContentOrBuilder() {
       return getContent();
     }
 
@@ -1284,10 +1284,10 @@ public final class MsgProto {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof br.ufs.dcomp.rabbitmq.MsgProto.Messenger)) {
+      if (!(obj instanceof br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger)) {
         return super.equals(obj);
       }
-      br.ufs.dcomp.rabbitmq.MsgProto.Messenger other = (br.ufs.dcomp.rabbitmq.MsgProto.Messenger) obj;
+      br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger other = (br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger) obj;
 
       boolean result = true;
       result = result && getSender()
@@ -1331,69 +1331,69 @@ public final class MsgProto {
       return hash;
     }
 
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(byte[] data)
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(java.io.InputStream input)
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseDelimitedFrom(java.io.InputStream input)
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseDelimitedFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger parseFrom(
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -1405,7 +1405,7 @@ public final class MsgProto {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(br.ufs.dcomp.rabbitmq.MsgProto.Messenger prototype) {
+    public static Builder newBuilder(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() {
@@ -1420,25 +1420,25 @@ public final class MsgProto {
       return builder;
     }
     /**
-     * Protobuf type {@code rabbitmq.Messenger}
+     * Protobuf type {@code rabbitmq.ChatMessenger}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:rabbitmq.Messenger)
-        br.ufs.dcomp.rabbitmq.MsgProto.MessengerOrBuilder {
+        // @@protoc_insertion_point(builder_implements:rabbitmq.ChatMessenger)
+        br.ufs.dcomp.rabbitmq.MsgProto.ChatMessengerOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_descriptor;
+        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_fieldAccessorTable
+        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                br.ufs.dcomp.rabbitmq.MsgProto.Messenger.class, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Builder.class);
+                br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.class, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Builder.class);
       }
 
-      // Construct using br.ufs.dcomp.rabbitmq.MsgProto.Messenger.newBuilder()
+      // Construct using br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.newBuilder()
       private Builder() {
         maybeForceBuilderInitialization();
       }
@@ -1474,23 +1474,23 @@ public final class MsgProto {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_Messenger_descriptor;
+        return br.ufs.dcomp.rabbitmq.MsgProto.internal_static_rabbitmq_ChatMessenger_descriptor;
       }
 
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger getDefaultInstanceForType() {
-        return br.ufs.dcomp.rabbitmq.MsgProto.Messenger.getDefaultInstance();
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger getDefaultInstanceForType() {
+        return br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.getDefaultInstance();
       }
 
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger build() {
-        br.ufs.dcomp.rabbitmq.MsgProto.Messenger result = buildPartial();
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger build() {
+        br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger buildPartial() {
-        br.ufs.dcomp.rabbitmq.MsgProto.Messenger result = new br.ufs.dcomp.rabbitmq.MsgProto.Messenger(this);
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger buildPartial() {
+        br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger result = new br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger(this);
         result.sender_ = sender_;
         result.date_ = date_;
         result.time_ = time_;
@@ -1531,16 +1531,16 @@ public final class MsgProto {
         return (Builder) super.addRepeatedField(field, value);
       }
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof br.ufs.dcomp.rabbitmq.MsgProto.Messenger) {
-          return mergeFrom((br.ufs.dcomp.rabbitmq.MsgProto.Messenger)other);
+        if (other instanceof br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger) {
+          return mergeFrom((br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(br.ufs.dcomp.rabbitmq.MsgProto.Messenger other) {
-        if (other == br.ufs.dcomp.rabbitmq.MsgProto.Messenger.getDefaultInstance()) return this;
+      public Builder mergeFrom(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger other) {
+        if (other == br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.getDefaultInstance()) return this;
         if (!other.getSender().isEmpty()) {
           sender_ = other.sender_;
           onChanged();
@@ -1573,11 +1573,11 @@ public final class MsgProto {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        br.ufs.dcomp.rabbitmq.MsgProto.Messenger parsedMessage = null;
+        br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (br.ufs.dcomp.rabbitmq.MsgProto.Messenger) e.getUnfinishedMessage();
+          parsedMessage = (br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger) e.getUnfinishedMessage();
           throw e.unwrapIOException();
         } finally {
           if (parsedMessage != null) {
@@ -1857,7 +1857,7 @@ public final class MsgProto {
       private java.lang.Object group_ = "";
       /**
        * <pre>
-       *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+       * Informa o nome do grupo, se a mensagem for para um grupo
        * </pre>
        *
        * <code>string group = 4;</code>
@@ -1876,7 +1876,7 @@ public final class MsgProto {
       }
       /**
        * <pre>
-       *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+       * Informa o nome do grupo, se a mensagem for para um grupo
        * </pre>
        *
        * <code>string group = 4;</code>
@@ -1896,7 +1896,7 @@ public final class MsgProto {
       }
       /**
        * <pre>
-       *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+       * Informa o nome do grupo, se a mensagem for para um grupo
        * </pre>
        *
        * <code>string group = 4;</code>
@@ -1913,7 +1913,7 @@ public final class MsgProto {
       }
       /**
        * <pre>
-       *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+       * Informa o nome do grupo, se a mensagem for para um grupo
        * </pre>
        *
        * <code>string group = 4;</code>
@@ -1926,7 +1926,7 @@ public final class MsgProto {
       }
       /**
        * <pre>
-       *optional string group = 4; // Informa o nome do grupo, se a mensagem for para um grupo
+       * Informa o nome do grupo, se a mensagem for para um grupo
        * </pre>
        *
        * <code>string group = 4;</code>
@@ -1943,29 +1943,29 @@ public final class MsgProto {
         return this;
       }
 
-      private br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo content_ = null;
+      private br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo content_ = null;
       private com.google.protobuf.SingleFieldBuilderV3<
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder> contentBuilder_;
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder> contentBuilder_;
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
       public boolean hasContent() {
         return contentBuilder_ != null || content_ != null;
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo getContent() {
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo getContent() {
         if (contentBuilder_ == null) {
-          return content_ == null ? br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.getDefaultInstance() : content_;
+          return content_ == null ? br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.getDefaultInstance() : content_;
         } else {
           return contentBuilder_.getMessage();
         }
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
-      public Builder setContent(br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo value) {
+      public Builder setContent(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo value) {
         if (contentBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -1979,10 +1979,10 @@ public final class MsgProto {
         return this;
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
       public Builder setContent(
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder builderForValue) {
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder builderForValue) {
         if (contentBuilder_ == null) {
           content_ = builderForValue.build();
           onChanged();
@@ -1993,13 +1993,13 @@ public final class MsgProto {
         return this;
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
-      public Builder mergeContent(br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo value) {
+      public Builder mergeContent(br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo value) {
         if (contentBuilder_ == null) {
           if (content_ != null) {
             content_ =
-              br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.newBuilder(content_).mergeFrom(value).buildPartial();
+              br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.newBuilder(content_).mergeFrom(value).buildPartial();
           } else {
             content_ = value;
           }
@@ -2011,7 +2011,7 @@ public final class MsgProto {
         return this;
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
       public Builder clearContent() {
         if (contentBuilder_ == null) {
@@ -2025,33 +2025,33 @@ public final class MsgProto {
         return this;
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder getContentBuilder() {
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder getContentBuilder() {
         
         onChanged();
         return getContentFieldBuilder().getBuilder();
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
-      public br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder getContentOrBuilder() {
+      public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder getContentOrBuilder() {
         if (contentBuilder_ != null) {
           return contentBuilder_.getMessageOrBuilder();
         } else {
           return content_ == null ?
-              br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.getDefaultInstance() : content_;
+              br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.getDefaultInstance() : content_;
         }
       }
       /**
-       * <code>.rabbitmq.Messenger.Conteudo content = 5;</code>
+       * <code>.rabbitmq.ChatMessenger.Conteudo content = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilderV3<
-          br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder> 
+          br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder> 
           getContentFieldBuilder() {
         if (contentBuilder_ == null) {
           contentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.Conteudo.Builder, br.ufs.dcomp.rabbitmq.MsgProto.Messenger.ConteudoOrBuilder>(
+              br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.Conteudo.Builder, br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger.ConteudoOrBuilder>(
                   getContent(),
                   getParentForChildren(),
                   isClean());
@@ -2070,54 +2070,54 @@ public final class MsgProto {
       }
 
 
-      // @@protoc_insertion_point(builder_scope:rabbitmq.Messenger)
+      // @@protoc_insertion_point(builder_scope:rabbitmq.ChatMessenger)
     }
 
-    // @@protoc_insertion_point(class_scope:rabbitmq.Messenger)
-    private static final br.ufs.dcomp.rabbitmq.MsgProto.Messenger DEFAULT_INSTANCE;
+    // @@protoc_insertion_point(class_scope:rabbitmq.ChatMessenger)
+    private static final br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new br.ufs.dcomp.rabbitmq.MsgProto.Messenger();
+      DEFAULT_INSTANCE = new br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger();
     }
 
-    public static br.ufs.dcomp.rabbitmq.MsgProto.Messenger getDefaultInstance() {
+    public static br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
-    private static final com.google.protobuf.Parser<Messenger>
-        PARSER = new com.google.protobuf.AbstractParser<Messenger>() {
-      public Messenger parsePartialFrom(
+    private static final com.google.protobuf.Parser<ChatMessenger>
+        PARSER = new com.google.protobuf.AbstractParser<ChatMessenger>() {
+      public ChatMessenger parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws com.google.protobuf.InvalidProtocolBufferException {
-        return new Messenger(input, extensionRegistry);
+        return new ChatMessenger(input, extensionRegistry);
       }
     };
 
-    public static com.google.protobuf.Parser<Messenger> parser() {
+    public static com.google.protobuf.Parser<ChatMessenger> parser() {
       return PARSER;
     }
 
     @java.lang.Override
-    public com.google.protobuf.Parser<Messenger> getParserForType() {
+    public com.google.protobuf.Parser<ChatMessenger> getParserForType() {
       return PARSER;
     }
 
-    public br.ufs.dcomp.rabbitmq.MsgProto.Messenger getDefaultInstanceForType() {
+    public br.ufs.dcomp.rabbitmq.MsgProto.ChatMessenger getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rabbitmq_Messenger_descriptor;
+    internal_static_rabbitmq_ChatMessenger_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rabbitmq_Messenger_fieldAccessorTable;
+      internal_static_rabbitmq_ChatMessenger_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_rabbitmq_Messenger_Conteudo_descriptor;
+    internal_static_rabbitmq_ChatMessenger_Conteudo_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_rabbitmq_Messenger_Conteudo_fieldAccessorTable;
+      internal_static_rabbitmq_ChatMessenger_Conteudo_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -2127,13 +2127,13 @@ public final class MsgProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\017messenger.proto\022\010rabbitmq\"\253\001\n\tMessenge" +
-      "r\022\016\n\006sender\030\001 \001(\t\022\014\n\004date\030\002 \001(\t\022\014\n\004time\030" +
-      "\003 \001(\t\022\r\n\005group\030\004 \001(\t\022-\n\007content\030\005 \001(\0132\034." +
-      "rabbitmq.Messenger.Conteudo\0324\n\010Conteudo\022" +
-      "\014\n\004type\030\001 \001(\t\022\014\n\004body\030\002 \001(\014\022\014\n\004name\030\003 \001(" +
-      "\tB!\n\025br.ufs.dcomp.rabbitmqB\010MsgProtob\006pr" +
-      "oto3"
+      "\n\017messenger.proto\022\010rabbitmq\"\263\001\n\rChatMess" +
+      "enger\022\016\n\006sender\030\001 \001(\t\022\014\n\004date\030\002 \001(\t\022\014\n\004t" +
+      "ime\030\003 \001(\t\022\r\n\005group\030\004 \001(\t\0221\n\007content\030\005 \001(" +
+      "\0132 .rabbitmq.ChatMessenger.Conteudo\0324\n\010C" +
+      "onteudo\022\014\n\004type\030\001 \001(\t\022\014\n\004body\030\002 \001(\014\022\014\n\004n" +
+      "ame\030\003 \001(\tB!\n\025br.ufs.dcomp.rabbitmqB\010MsgP" +
+      "rotob\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -2147,17 +2147,17 @@ public final class MsgProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_rabbitmq_Messenger_descriptor =
+    internal_static_rabbitmq_ChatMessenger_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_rabbitmq_Messenger_fieldAccessorTable = new
+    internal_static_rabbitmq_ChatMessenger_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rabbitmq_Messenger_descriptor,
+        internal_static_rabbitmq_ChatMessenger_descriptor,
         new java.lang.String[] { "Sender", "Date", "Time", "Group", "Content", });
-    internal_static_rabbitmq_Messenger_Conteudo_descriptor =
-      internal_static_rabbitmq_Messenger_descriptor.getNestedTypes().get(0);
-    internal_static_rabbitmq_Messenger_Conteudo_fieldAccessorTable = new
+    internal_static_rabbitmq_ChatMessenger_Conteudo_descriptor =
+      internal_static_rabbitmq_ChatMessenger_descriptor.getNestedTypes().get(0);
+    internal_static_rabbitmq_ChatMessenger_Conteudo_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_rabbitmq_Messenger_Conteudo_descriptor,
+        internal_static_rabbitmq_ChatMessenger_Conteudo_descriptor,
         new java.lang.String[] { "Type", "Body", "Name", });
   }
 

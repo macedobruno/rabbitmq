@@ -15,8 +15,7 @@ public class Messenger{
     private ConnectionFactory factory;
     private Connection connection;
     private Channel channel;
-    private String user, password, host;
-    private String dfQueue, dfUser, tipo;
+    private String user, password, host, dfQueue, dfUser, tipo;
     private Consumer consumer;
     
     //Inicia a classe
@@ -212,12 +211,12 @@ public class Messenger{
     }
     
     /*
-    public void protoSender(String mensagem){
+    public byte[] protoSender(String mensagem){
         MsgProto.Conteudo.Builder content = MsgProto.Conteudo.newBuilder();
         content.setType("text/plain");
         content.setBody(mensagem.getBytes());
         
-        MsgProto.Messenger.Builder msg = MsgProto.newBuilder();
+        MsgProto.ChatMessenger.Builder msg = MsgProto.newBuilder();
         msg.setSender(this.dfUser);
         msg.setDate(getDate());
         msg.setTime(getTime());
@@ -228,11 +227,19 @@ public class Messenger{
         
         msg.setConteudo(content);
         
-        MsgProto.Messenger messenger = builderMessenger.build();
+        MsgProto.ChatMessenger proto = builderMessenger.build();
+        
+        byte[] buffer = proto.toByteArray();
+        
+        return buffer;
+        //FileOutputStream fos = new FileOutputStream(new File("mensagem.bin"));
+        //fos.write(buffer);
+        //fos.close();
         //msg.build();
 
-    }
+    }*/
     
+    /*
     public void protoFile(byte[] file) throws Exception{
         
     }*/
